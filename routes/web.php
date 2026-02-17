@@ -17,6 +17,10 @@ use App\Http\Controllers\WebsiteController;
 //     return view('welcome');
 // });
 Route::get('/', [WebsiteController::class,'index'])->name('home');
+
+Route::get('/alumni/search', [WebsiteController::class, 'searchAlumni'])->name('alumni.search');
+
+
 Route::get('/contact', [WebsiteController::class,'contact'])->name('contact');
 Route::get('/alumni', [WebsiteController::class,'alumni'])->name('alumni');
 Route::get('/events', [WebsiteController::class,'event'])->name('event');

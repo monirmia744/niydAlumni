@@ -101,8 +101,11 @@
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Current Position</label>
                                 <select name="current_position" class="form-control" required>
-                                    <option value="Worker" {{ $profile->current_position == 'Worker' ? 'selected' : '' }}>Worker</option>
-                                    <option value="Worker" {{ $profile->current_position == 'Non-Worker' ? 'selected' : '' }}>Non-Worker</option>
+                                    <option value="Job-Holder/Professional" {{ $profile->current_position == 'Job-Holder/Professional' ? 'selected' : '' }}>Job Holder/Professional</option>
+                                    <option value="Entrepreneur" {{ $profile->current_position == 'Entrepreneurr' ? 'selected' : '' }}>Entrepreneur</option>
+                                    <option value="Freelancer" {{ $profile->current_position == 'Freelancer' ? 'selected' : '' }}>Freelancer</option>
+                                    <option value="Job Seeker" {{ $profile->current_position == 'Job Seeker' ? 'selected' : '' }}>Job Seeker</option>
+                                    <option value="Others" {{ $profile->current_position == 'Others' ? 'selected' : '' }}>Others</option>
                                 </select>
                             </div>
                             <div class="col-md-6 mb-3">

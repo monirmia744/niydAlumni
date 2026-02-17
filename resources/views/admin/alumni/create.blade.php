@@ -101,11 +101,14 @@
 
                             {{-- Career Info --}}
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Employment Status</label>
-                                <select name="current_position" id="employmentStatus" class="form-select" required>
+                                <label class="form-label">Current Position</label>
+                                <select name="current_position" id="" class="form-select" required>
                                     <option value="">-- Select Status --</option>
-                                    <option value="Worker">Worker</option>
-                                    <option value="Non-Worker">Non-Worker</option>
+                                    <option value="Job-Holder/Professional">Job Holder/Professional</option>
+                                    <option value="Entrepreneur">Entrepreneur</option>
+                                    <option value="Freelancer">Freelancer</option>
+                                    <option value="Job Seeker">Job Seeker</option>
+                                    <option value="Others">Others</option>
                                 </select>
                             </div>
 

@@ -10,7 +10,7 @@ class AdminController extends Controller
     {
         
         $totalAlumni = \App\Models\User::count(); 
-        $workingAlumni = \App\Models\AlumniProfile::where('current_position', 'worker')->count(); 
+        $workingAlumni = \App\Models\AlumniProfile::where('current_position', 'Job-Holder/Professional')->count(); 
         $annualEvents = \App\Models\Event::count();
         $jobPostings = \App\Models\JobPost::count();
 

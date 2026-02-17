@@ -1,6 +1,94 @@
 @extends('website.header-footer.header-footer')
 
 @section('main')
+
+<section class="container my-5 py-2 px-2 ">
+    <div class="row g-4">
+        <div class="col-sm-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 transition-up">
+                        <div class="card-body d-flex align-items-center p-4">
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded-circle me-3"><i
+                                    class="bi bi-people-fill text-primary fs-3"></i></div>
+                            <div>
+                                <h4 class="fw-bold mb-0">{{ $totalAlumni }}</h4>
+                                <p class="text-muted mb-0 small text-uppercase fw-semibold">Total Alumni</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        <div class="col-sm-6 col-lg-4">
+            <div class="card border-0 shadow-sm h-100 transition-up">
+                <div class="card-body d-flex align-items-center p-4">
+                    <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                        <i class="bi bi-person-badge-fill text-primary fs-3"></i>
+                    </div>
+                    <div>
+                        <h4 class="fw-bold mb-0 counter" data-target="1250">{{ $workingAlumni }}</h4>
+                        <p class="text-muted mb-0 small text-uppercase fw-semibold">Job Holders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+            <div class="card border-0 shadow-sm h-100 transition-up">
+                <div class="card-body d-flex align-items-center p-4">
+                    <div class="flex-shrink-0 bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                        <i class="bi bi-lightbulb-fill text-success fs-3"></i>
+                    </div>
+                    <div>
+                        <h4 class="fw-bold mb-0 counter" data-target="450">{{ $entrepreneur }}</h4>
+                        <p class="text-muted mb-0 small text-uppercase fw-semibold">Entrepreneurs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+            <div class="card border-0 shadow-sm h-100 transition-up">
+                <div class="card-body d-flex align-items-center p-4">
+                    <div class="flex-shrink-0 bg-info bg-opacity-10 p-3 rounded-circle me-3">
+                        <i class="bi bi-laptop-fill text-info fs-3"></i>
+                    </div>
+                    <div>
+                        <h4 class="fw-bold mb-0 counter" data-target="820">{{ $Freelancer }}</h4>
+                        <p class="text-muted mb-0 small text-uppercase fw-semibold">Freelancers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 ">
+            <div class="card border-0 shadow-sm h-100 transition-up">
+                <div class="card-body d-flex align-items-center p-4">
+                    <div class="flex-shrink-0 bg-warning bg-opacity-10 p-3 rounded-circle me-3">
+                        <i class="bi bi-search text-warning fs-3"></i>
+                    </div>
+                    <div>
+                        <h4 class="fw-bold mb-0 counter" data-target="300">{{ $Job_Seeker }}</h4>
+                        <p class="text-muted mb-0 small text-uppercase fw-semibold">Job Seekers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+            <div class="card border-0 shadow-sm h-100 transition-up">
+                <div class="card-body d-flex align-items-center p-4">
+                    <div class="flex-shrink-0 bg-secondary bg-opacity-10 p-3 rounded-circle me-3">
+                        <i class="bi bi-three-dots text-secondary fs-3"></i>
+                    </div>
+                    <div>
+                        <h4 class="fw-bold mb-0 counter" data-target="150">{{ $Others }}</h4>
+                        <p class="text-muted mb-0 small text-uppercase fw-semibold">Others</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 <div class="container mt-5 mb-5">
     <div class="text-center mb-5">
         <h2 class="display-6 fw-bold text-primary">Alumni Directory</h2>
@@ -9,15 +97,14 @@
 
     <div class="row">
         @foreach ($alumus as $alumni)
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-lg-3 col-md-6 mb-4">
             <div class="card h-100 shadow border-0 rounded-4 overflow-hidden">
                 
                 <div class="bg-light">
                     <img src="{{ asset($alumni->image) }}" 
                          class="card-img-top" 
-                         style="height: 260px; object-fit: cover;" 
-                         alt="{{ $alumni->user->name }}"
-                         onerror="this.src='https://via.placeholder.com/400x300?text=No+Profile+Photo'">
+                         style="height: 250px; " 
+                         alt="{{ $alumni->user->name }}">
                 </div>
 
                 <div class="card-body">

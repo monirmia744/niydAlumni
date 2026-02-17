@@ -18,28 +18,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="position-relative">
-                            <img src="{{ asset('img/5.jpeg') }}" class="d-block w-100" alt="Alumni"
-                                style="height: 600px; object-fit: cover;">
-                            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.5);">
-                            </div>
-                        </div>
-                        <div
-                            class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 top-0">
-                            <h1 class="display-3 fw-bold animate__animated animate__fadeInDown">Welcome to the NIYD Alumni
-                                Association</h1>
-                            <p class="fs-4 mb-4 animate__animated animate__fadeInUp">Connecting Alumni, Managing Events,
-                                Fostering Career Opportunities.</p>
-                            <div class="animate__animated animate__zoomIn">
-                                <a href="{{ route('register') }}" class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow">Join as Lifetime
-                                    Member</a>
-                                <a href="#" class="btn btn-outline-light btn-lg px-4 py-2 rounded-pill ms-2">Explore
-                                    Events</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="position-relative">
-                            <img src="{{ asset('img/3.jpg') }}" class="d-block w-100" alt="Alumni"
+                            <img src="{{ asset('img/6.jpg') }}" class="d-block w-100" alt="Alumni"
                                 style="height: 600px; object-fit: cover;">
                             <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.5);">
                             </div>
@@ -61,6 +40,27 @@
                     <div class="carousel-item">
                         <div class="position-relative">
                             <img src="{{ asset('img/5.jpeg') }}" class="d-block w-100" alt="Alumni"
+                                style="height: 600px; object-fit: cover;">
+                            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.5);">
+                            </div>
+                        </div>
+                        <div
+                            class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 top-0">
+                            <h1 class="display-3 fw-bold animate__animated animate__fadeInDown">Welcome to the NIYD Alumni
+                                Association</h1>
+                            <p class="fs-4 mb-4 animate__animated animate__fadeInUp">Connecting Alumni, Managing Events,
+                                Fostering Career Opportunities.</p>
+                            <div class="animate__animated animate__zoomIn">
+                                <a href="{{ route('register') }}" class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow">Join as Lifetime
+                                    Member</a>
+                                <a href="#" class="btn btn-outline-light btn-lg px-4 py-2 rounded-pill ms-2">Explore
+                                    Events</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="position-relative">
+                            <img src="{{ asset('img/9.jpeg') }}" class="d-block w-100" alt="Alumni"
                                 style="height: 600px; object-fit: cover;">
                             <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.5);">
                             </div>
@@ -188,15 +188,15 @@
 
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="{{ asset('img/1.jpg') }}" class="d-block w-100 object-fit-cover"
+                                        <img src="{{ asset('img/8 (2).jpg') }}" class="d-block w-100 object-fit-cover"
                                             style="height: 400px;" alt="Alumni 1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="img/2.jpg" class="d-block w-100 object-fit-cover" style="height: 400px;"
+                                        <img src="{{ asset('img/6.jpg') }}" class="d-block w-100 object-fit-cover" style="height: 400px;"
                                             alt="Alumni 2">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="img/3.jpg" class="d-block w-100 object-fit-cover" style="height: 400px;"
+                                        <img src="{{ asset('img/8 (1).jpg') }}" class="d-block w-100 object-fit-cover" style="height: 400px;"
                                             alt="Alumni 3">
                                     </div>
                                 </div>
@@ -281,6 +281,190 @@
                 </div>
             </div>
         </div>
+
+       <section class="container my-5">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <span class="d-inline-block bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill small fw-bold mb-3">
+                <i class="bi bi-search me-1"></i>Find Your Alumni
+            </span>
+            <h3 class="fw-bold mb-3">Search & Filter Alumni</h3>
+            <p class="text-muted w-75 mx-auto">Browse through our alumni network by department, batch, or year</p>
+        </div>
+
+        <!-- Main Search Card -->
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-xl-12">
+                <div class="card border-0 shadow p-4 p-lg-5 rounded-4 bg-white">
+                    <form action="{{ route('home') }}" method="GET">
+                        <!-- Filter Chips - Moved inside for better flow -->
+                        <div class="d-flex justify-content-center gap-2 mb-4">
+                            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">
+                                <i class="bi bi-funnel me-1"></i>Advanced Filters
+                            </span>
+                            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">
+                                <i class="bi bi-clock me-1"></i>Real-time Results
+                            </span>
+                        </div>
+
+                        <div class="row g-4 align-items-end">
+                            <!-- Department Select -->
+                            <div class="col-md-6 col-lg-4">
+                                <label class="form-label fw-semibold text-dark mb-2">
+                                    <i class="bi bi-building text-primary me-1"></i>
+                                    Department
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-0">
+                                        <i class="bi bi-diagram-3"></i>
+                                    </span>
+                                    <select class="form-select bg-light border-0" name="department" onchange="this.form.submit()">
+                                        {{-- কোনো কিছু সিলেক্ট করা না থাকলে এটি দেখাবে --}}
+                                        <option value="" {{ request('department') == '' ? 'selected' : '' }}>--Select Department--</option>
+                                        
+                                        {{-- সব অ্যালামনাই দেখানোর জন্য --}}
+                                        <option value="all" {{ request('department') == 'all' ? 'selected' : '' }}>All Alumni / Departments</option>
+                                        
+                                        {{-- লুপের মাধ্যমে ডিপার্টমেন্টগুলো আসবে --}}
+                                        @foreach ($departments as $department)
+                                            <option value="{{ $department->name }}" {{ request('department') == $department->name ? 'selected' : '' }}>
+                                                {{ $department->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Batch Select -->
+                            <div class="col-md-6 col-lg-3">
+                                <label class="form-label fw-semibold text-dark mb-2">
+                                    <i class="bi bi-calendar-check text-primary me-1"></i>
+                                    Batch
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-0">
+                                        <i class="bi bi-people"></i>
+                                    </span>
+                                    <select class="form-select bg-light border-0" name="batch" onchange="this.form.submit()">
+                                        <option value="">Choose batch...</option> 
+                                        @foreach ($batchs as $batch)
+                                            <option value="{{ $batch->batch }}" {{ request('batch') == $batch->batch ? 'selected' : '' }}>
+                                                {{ $batch->batch }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Year Select -->
+                            <div class="col-md-6 col-lg-3">
+                                <label class="form-label fw-semibold text-dark mb-2">
+                                    <i class="bi bi-calendar-event text-primary me-1"></i>
+                                    Passing Year
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-0">
+                                        <i class="bi bi-clock"></i>
+                                    </span>
+                                    <select class="form-select bg-light border-0" name="year" onchange="this.form.submit()">
+                                        <option value="">Select year...</option>
+                                        @foreach ($years as $year)
+                                            <option value="{{ $year->batch_year }}" {{ request('year') == $year->batch_year ? 'selected' : '' }}>
+                                                {{ $year->batch_year }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Search Button -->
+                            <div class="col-md-6 col-lg-2">
+                                <label class="form-label fw-semibold text-dark mb-2 opacity-0">Search</label>
+                                <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">
+                                    <i class="bi bi-search me-2"></i>
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Quick Filter Links -->
+                    </form>
+
+                    <div class="row py-5">
+                        @forelse ($alumniResults as $alumni)
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card h-100 shadow border-0 rounded-4 overflow-hidden">
+                                    <div class="bg-light">
+                                        <img src="{{ $alumni->image ? asset($alumni->image) : asset('assets/default-user.png') }}" 
+                                            class="card-img-top" style="height: 250px; object-fit: cover;" alt="Alumni">
+                                    </div>
+                                    <div class="card-body">
+                                        <span class="badge rounded-pill bg-primary-subtle text-primary mb-2">
+                                            {{ $alumni->batch }} Batch
+                                        </span>
+
+                                        <h5 class="card-title fw-bold text-dark mb-1">{{ $alumni->user->name }}</h5>
+                                        
+                                        <p class="card-text mb-2 text-secondary small">
+                                            <strong>{{ $alumni->current_position ?? 'Alumni' }}</strong> 
+                                            @if($alumni->company) <span class="text-muted">at</span> {{ $alumni->company }} @endif
+                                        </p>
+
+                                        <hr class="text-secondary opacity-25">
+
+                                        <p class="card-text text-muted small">
+                                            {{ Str::limit($alumni->profile_summary, 80, '...') }}
+                                        </p>
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-3 bg-light p-2 rounded-3">
+                                            <small class="text-muted"><i class="bi bi-droplet-fill text-danger"></i> {{ $alumni->blood_group ?? 'N/A' }}</small>
+                                            <small class="text-muted"><i class="bi bi-geo-alt"></i> {{ Str::limit($alumni->address, 15) }}</small>
+                                        </div>
+                                        <div class="card-footer bg-white border-0 p-3">
+                                            <a href="{{ route('website.alumni.details', $alumni->id) }}" class="btn btn-primary w-100 rounded-pill fw-bold">View Full Profile</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                            </div>
+                        @empty
+                            <div class="col-12 text-center py-5">
+                                <div class="mb-3">
+                                    <i class="bi bi-people text-muted" style="font-size: 2rem;"></i>
+                                </div>
+                                <h5 class="text-muted">No alumni profiles to display.</h5>
+                                <p class="text-secondary small">Please select a department, batch, or year to start searching.</p>
+                            </div>
+                        @endforelse
+                    </div>
+
+                    
+                </div>
+
+                <!-- Status Bar -->
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <div class="d-flex gap-4">
+                        <span class="small text-muted">
+                            <i class="bi bi-check-circle-fill text-success me-1"></i>
+                            {{ $foundCount }} alumni found
+                        </span>
+                        <span class="small text-muted">
+                            <i class="bi bi-arrow-repeat me-1"></i>
+                            Updated live
+                        </span>
+                    </div>
+                    <a href="{{ route('home') }}" class="text-decoration-none small text-primary fw-semibold">
+                        <i class="bi bi-x-circle me-1"></i>
+                        Clear all filters
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
     </main>
 
 
